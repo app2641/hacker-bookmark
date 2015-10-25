@@ -1,0 +1,11 @@
+%ul.entry-list
+  - @items.each do |i|
+    %li.entry-list__item
+      %p.entry-list__item__link
+        = link_to i.title, i.link, taget: '_blank', class: 'entry-list__item__link__title'
+        = link_to image_tag("http://b.hatena.ne.jp/entry/image/#{i.link}"), "http://b.hatena.ne.jp/entry/#{i.link}", target: '_blank'
+      %p.entry-list__item__description
+        = URI.parse(i.link).host
+        %span
+          |
+        = pretty_date i.dc_date.to_s
