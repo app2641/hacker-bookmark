@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # hacker-bookmark
+config/database.yml
 vendor
 
 # Ignore bundler config.

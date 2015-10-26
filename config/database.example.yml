@@ -10,8 +10,8 @@ defaults: &defaults
   reconnect: false
   database: hacker_bookmark
   pool: 5
-  username: app2641
-  password: my$app26$nm
+  username: root
+  password:
   socket: <%= ['/tmp/mysqld.sock', '/tmp/mysql.sock', '/var/run/mysqld/mysqld.sock', '/var/lib/mysql/mysql.sock', '/opt/local/var/run/mysql5/mysqld.sock'].detect {|s| File.exists? s} %>
 
 development:
