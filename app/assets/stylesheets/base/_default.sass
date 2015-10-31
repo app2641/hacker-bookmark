@@ -1,17 +1,33 @@
+html
+  position: relative
+  min-height: 100%
 
-html, body
+body
   width: 100%
   height: 100%
 
 *
   font-family: 'Lora', serif
 
-div.entry-container
-  margin: 0px
-  padding: 0px 15%
+.main-container
+  margin-bottom: 50px
 
-  h1#title
-    a
-      color: black
-      &:hover, &:active
-        text-decoration: none
+  .entry-container
+    margin: 0px
+    padding: 0px 15%
+
+    h1#title
+      a
+        color: black
+        &:hover, &:active
+          text-decoration: none
+
+footer.footer
+  position: absolute
+  bottom: 0
+  width: 100%
+
+  .container
+    p
+      margin: 15px 0px
+
