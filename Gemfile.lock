@@ -290,6 +290,7 @@ DEPENDENCIES
   jquery-rails
   kaminari (>= 0.15.1)
   mysql2 (~> 0.3.20)
+  nokogiri
   poltergeist (>= 1.1.0)
   rails (= 4.2.4)
   rspec (~> 3)

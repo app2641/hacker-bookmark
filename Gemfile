@@ -48,9 +48,7 @@ gem 'spring-commands-rspec', '>= 1.0.1'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-gem 'action_args', '>= 1.5.1'
-gem 'kaminari', '>= 0.15.1'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'rspec', '~> 3'

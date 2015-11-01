@@ -1,5 +1,7 @@
+require 'nokogiri'
+require 'open-uri'
+
 class TagController < ApplicationController
-  require 'rss'
 
   def index
     url = generate_url Tag.all.map(&:name)
@@ -25,12 +27,12 @@ class TagController < ApplicationController
     date_end = Date.today.to_s
     date_begin = (Date.today - 6.days).to_s
 
-    url = "http://b.hatena.ne.jp/search/tag?safe=off&sort=popular&date_end=#{date_end}&q=#{tags}&date_begin=#{date_begin}&mode=rss"
+    url = "http://b.hatena.ne.jp/search/tag?q=#{tags}&date_begin=#{date_begin}&date_end=#{date_end}&safe=off&sort=popular&mode=rss"
     URI.escape url
   end
 
   def parse_rss url
-    rss = RSS::Parser.parse url
-    rss.items
+    rss = Nokogiri::XML open(url)
+    rss.search('item')
   end
 end
