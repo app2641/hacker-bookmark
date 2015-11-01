@@ -1,7 +1,6 @@
 module ApplicationHelper
   def pretty_date date
-    date = DateTime.parse(date)
-    diff = (DateTime.now.to_i - date.to_i)
+    diff = (Time.now.to_i - date.to_i)
     date_diff = (diff / 86400).floor
 
     if date_diff == 0
