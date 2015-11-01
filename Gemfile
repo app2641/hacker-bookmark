@@ -60,4 +60,6 @@ end
 group :test do
   gem 'capybara', '>= 2.1.0'
   gem 'poltergeist', '>= 1.1.0'
+  gem 'webmock'
+  gem 'database_cleaner'
 end
