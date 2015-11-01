@@ -11,7 +11,7 @@ class TagController < ApplicationController
   def show
     url = generate_url params[:name]
     @items = parse_rss url
-    @tag   = params[:name]
+    @tag   = Tag.find_by(name: params[:name])
   end
 
   def list
