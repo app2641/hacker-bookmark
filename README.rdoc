@@ -1,11 +1,11 @@
-== README
+== README [![Circle CI](https://circleci.com/gh/app2641/hacker-bookmark/tree/master.svg?style=svg)](https://circleci.com/gh/app2641/hacker-bookmark/tree/master)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version* 
 
 * System dependencies
 
