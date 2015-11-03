@@ -2,3 +2,7 @@ machine:
   ruby:
     version: 2.2.3
   timezone: Asia/Tokyo
+
+dependencies:
+  pre:
+    - cp config/circle/secrets.circle.yml config/secrets.yml
