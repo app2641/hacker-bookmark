@@ -11,7 +11,11 @@ class TagController < ApplicationController
   def show
     url = generate_url params[:name]
     @items = parse_rss url
-    @tag   = Tag.find_by(name: params[:name])
+    if Tag.where(name: params[:name]).exists?
+      @tag = Tag.find_by(name: params[:name]).official_name
+    else
+      @tag = params[:name]
+    end
   end
 
   def list
