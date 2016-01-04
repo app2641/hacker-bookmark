@@ -3,7 +3,7 @@
     %li.entry-list__item
       %p.entry-list__item__link
         = image_tag("http://favicon.st-hatena.com/?url=#{i.search('link').text}")
-        = link_to i.search('title').text, i.search('link').text, taget: '_blank', class: 'entry-list__item__link__title'
+        = link_to i.search('title').text, i.search('link').text, target: '_blank', class: 'entry-list__item__link__title'
         = link_to image_tag("http://b.hatena.ne.jp/entry/image/#{i.search('link').text}"), "http://b.hatena.ne.jp/entry/#{i.search('link').text}", target: '_blank'
       %p.entry-list__item__description
         = URI.parse(i.search('link').text).host
