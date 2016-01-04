@@ -36,7 +36,8 @@ class TagController < ApplicationController
   end
 
   def parse_rss url
-    rss = Nokogiri::XML open(url)
+    ua = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36'
+    rss = Nokogiri::XML open(url, "User-Agent" => ua).read
     rss.search('item')
   end
 end
